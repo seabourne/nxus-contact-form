@@ -1,6 +1,6 @@
 {
   "name": "nxus-contact-form",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "A contact form handler for Nxus apps.",
   "main": "lib",
   "scripts": {
