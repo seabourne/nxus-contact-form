@@ -34,10 +34,10 @@ export default class ContactForm {
 
       transporter.sendMail(opts, function(error, info){
         if(error){
-            console.log(opts)
+            console.log(opts, error)
             if(req.param('redirect')) {
               req.flash("error", "Error sending contact.  Please email us at custom@govtraq.com")
-              return res.redirect(req.param('redirect'))
+              return res.redirect(req.get('Referrer'))
             } else
             return res.status(500).send(error)
         }
