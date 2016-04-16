@@ -1,7 +1,7 @@
 /*
 * @Author: Mike Reich
 * @Date:   2016-03-16 12:00:37
-* @Last Modified 2016-04-07
+* @Last Modified 2016-04-16
 */
 
 'use strict';
@@ -35,8 +35,14 @@ export default class ContactForm {
       transporter.sendMail(opts, function(error, info){
         if(error){
             console.log(opts)
+            if(req.param('redirect')) {
+              req.flash("error", "Error sending contact.  Please email us at custom@govtraq.com")
+              return res.redirect(req.param('redirect'))
+            } else
             return res.status(500).send(error)
         }
+        if(req.param('redirect'))
+          return res.redirect(req.param('redirect'))
         return res.status(200).send()
       });
     })
