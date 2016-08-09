@@ -1,8 +1,16 @@
 /*
 * @Author: Mike Reich
 * @Date:   2016-03-16 12:00:37
-* @Last Modified 2016-04-16
+* @Last Modified 2016-08-09
 */
+/**
+ * # Installation
+ *
+ *      npm install nxus-contact-form --save
+ *
+ * # API
+ * ---
+ */
 
 'use strict';
 

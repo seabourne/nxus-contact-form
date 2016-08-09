@@ -1,7 +1,11 @@
-# Nxus Contact Form
+# nxus-contact-form
+
+## 
 
 ## Installation
 
-    npm install nxus-contact-form --save
+     npm install nxus-contact-form --save
 
 ## API
+
+* * *
